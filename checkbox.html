@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function myFunction()
+        {
+    var select = document.getElementById("demo")
+    alert(select.options[select.selectedIndex].value)
+        }
+    </script>
+</head>
+<body>
+    <select name="Games" id="demo">
+        <option value="GTA">GTA</option>
+        <option value="NFS">NFS</option>
+        <option value="CASTLEVANIA">CASTLEVANIA</option>
+        <option value="FC3">FC3</option>
+    </select>
+    <button type="submit" onclick="myFunction()">Click Me</button>
+</body>
+</html>

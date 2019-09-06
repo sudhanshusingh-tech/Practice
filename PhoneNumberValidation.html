@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function myFunction()
+    {
+        var Username=document.getElementById("user").value;
+        var regx = /^[6-9]\d{9}$/;
+        if(regx.test(Username))
+        {
+            alert("Valid PhoneNumber")
+            document.getElementById("dede").innerHTML = "Valid";
+            document.getElementById("user").style.border="2px solid green"; 
+            document.getElementById("dede").style.visibility="visible";
+        }
+        else
+        {
+            alert("Invalid PhoneNumber")
+            document.getElementById("dede").innerHTML = "Invalid";
+            document.getElementById("user").style.border="2px solid red"; 
+            document.getElementById("dede").style.visibility="visible";
+        }
+    }
+    
+    </script>
+</head>
+<body>
+        <input type="text" name="username" id="user" placeholder="Enter PhoneNumber">
+        <label id="dede" style="visibility: hidden; color: red;">Invalid PhoneNumber</label><br>
+        <input type="button" name="Submit" value="SUBMIT" id="demo" onclick="myFunction()" ><br>
+</body>
+</html>

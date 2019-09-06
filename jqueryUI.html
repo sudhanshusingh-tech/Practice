@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+<body>
+    <div id="ddd">
+    <h1>Hey its me margret</h1>
+    <input id = "lam" type="text" placeholder="Select a date">
+    </div>
+</body>
+<script src="JS/jquery-3.4.1.js" type="text/javascript"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+<script>
+$("#lam").datepicker({
+    numberOfMonths:1,
+    changeYear:true,
+    changeMonth:true,
+    showOtherMonths:true,
+    minDate: new Date(2020,0,10),
+    maxDate: new Date(2024,0,10)
+});
+</script>
+</html>

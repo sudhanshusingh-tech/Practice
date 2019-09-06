@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function myFunction()
+    {
+        var Username=document.getElementById("user").value;
+        var regx = /^([a-zA-Z0-9\-.]+)@([a-zA-Z]{2,20}).([a-zA-Z]{2,20}).([a-zA-Z]{2,20})$/;
+        if(regx.test(Username))
+        {
+            alert("Valid Email")
+            document.getElementById("dede").innerHTML = "Valid";
+            document.getElementById("user").style.border="2px solid green"; 
+            document.getElementById("dede").style.visibility="visible";
+            document.getElementById("dede").style.color="green";
+        }
+        else
+        {
+            alert("Invalid Email")
+            document.getElementById("dede").innerHTML = "Invalid";
+            document.getElementById("user").style.border="2px solid red"; 
+            document.getElementById("dede").style.visibility="visible";
+        }
+    }
+    
+    </script>
+</head>
+<body>
+        <input type="text" name="username" id="user" placeholder="Enter Email">
+        <label id="dede" style="visibility: hidden; color: red;">Invalid EmailId</label><br>
+        <input type="button" name="Submit" value="SUBMIT" id="demo" onclick="myFunction()" ><br>
+</body>
+</html>

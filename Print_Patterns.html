@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+<p> Hello </p>
+<input id = "new" type = "text" >
+<input id = "demo" type="button" value="Click HEre to enter the input" onclick = "myFunc()" >
+<script type="text/javascript">
+
+function myFunc()
+{
+var n = document.getElementById("new").value;
+   var i,j,k;
+   for(i=1;i<=n;i++)
+   {
+	for(k=1;k<=n-i;k++)
+        {
+	   document.write("&nbsp;");
+        }
+	for(j=1;j<=2*i-1;j++)
+        {
+  	  document.write("*");
+        }
+        document.write("<br>");
+ 
+  }
+
+}
+
+
+</script>
+
+
+</body>
+</html>

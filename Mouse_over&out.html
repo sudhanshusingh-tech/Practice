@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function setNewImage(){
+    document.getElementById("demo").src = ("contact-fullpage-output.png")
+        }
+        function setOldImage()
+        {
+            document.getElementById("demo").src=("gallery-output.png")   
+        }
+    </script>
+</head>
+<body>
+    <img id="demo" onmouseover="setNewImage()" onmouseout="setOldImage()" src="gallery-output.png" width="500px" alt="Gallery"></body>
+</body>
+</html>

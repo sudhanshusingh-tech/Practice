@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    var opacity=0;
+    var intervalId=0;
+    function fadeOut()
+    {
+        intervalId = setInterval(hide,100);
+    }
+    function hide()
+    {
+        var img = document.getElementById("image")
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        //window.getComputedStyle(img).getPropertyValue("opacity"); returns a string so to have opaacity in number we have used number constructor
+        if(opacity>0)
+        {
+            opacity = opacity-0.1;
+            img.style.opacity = opacity;
+        }
+        else
+        {
+            clearInterval(intervalId)
+        }
+    }
+    function fadeIn()
+    {
+        intervalId = setInterval(show,100);
+    }
+    function show()
+    {
+        var img = document.getElementById("image")
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        //window.getComputedStyle(img).getPropertyValue("opacity"); returns a string so to have opaacity in number we have used number constructor
+        if(opacity<=1)
+        {
+            opacity = opacity+0.1;
+            img.style.opacity = opacity;
+        }
+        else
+        {
+            clearInterval(intervalId)
+        }
+    }
+
+
+    
+    
+    </script>
+</head>
+<body>
+    <button onclick="fadeIn()" type="button" id="fdin">Fade In</button><br>
+    <img src="img/gallery-output.png" id="image" style="opacity: 1" alt="Gallery Of Images" width="300" height="300"><br>
+    <button onclick="fadeOut()" type="button" id="fdout">Fade Out</button><br>
+</body>
+</html>

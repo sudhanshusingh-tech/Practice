@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<style>
+body{
+    text-align: center;
+    padding-top: 250px;
+}
+
+</style>
+<body>
+    <img id="he" onmouseover="increase()" onmouseout="decrease()" width="100" src="img/Heart.png" alt="A Heart" />
+    <script type="text/javascript">
+        var intervalId=0;
+        var w=100;
+        var diff=2;
+        
+        function increase()
+            {
+                clearInterval(intervalId); // First Clears the interval which is currently going on so that image should not vibrate
+                intervalId = setInterval(zoomIn,20);
+            }
+        function zoomIn()
+        {
+            if(w<200)
+            {
+                w = w+2;
+                document.getElementById("he").width = w;
+            }
+            else
+            {
+                clearInterval(intervalId);
+            }
+        }
+        function decrease()
+            {
+                clearInterval(intervalId);
+                intervalId = setInterval(zoomOut,20);
+            }
+        function zoomOut()
+        {
+            if(w>100)
+            {
+                w = w-2;
+                document.getElementById("he").width = w;
+            }
+            else
+            {
+                clearInterval(intervalId);
+            }
+        }
+        
+        </script>
+</body>
+</html>

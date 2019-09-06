@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function myFunction()
+{
+    var xz = document.getElementById("gr1").value;
+    var yz = document.getElementById("gr2").value;
+    if(xz.checked==true)
+    {
+        alert("The radio button checked is: "+xz.value);
+    }
+    else if(xz.checked==true)
+    {
+        alert("The radio button checked is: "+yz.value);
+    }
+    else{
+        alert("No button is checked, Please Select one Option");
+    }
+
+}    
+    
+    </script>
+</head>
+<body>
+    <input type="radio" name="grp1" id="gr1" value="How High Are You?">How High Are You?</input><br>
+    <input type="radio" name="grp1" id="gr2" value="High How Are You">High How Are You.</input><br>
+    <button type="submit" id="btn1" onclick="myFunction()">Submit</button>
+
+
+
+</body>
+</html>
